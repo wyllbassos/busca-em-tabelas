@@ -3,21 +3,25 @@ import React, {
   useContext,
   useState,
   useCallback,
-  useMemo,
   useEffect,
 } from 'react';
-import jsonTabelas from '../database/tabelas.json';
-import jsonProdutos from '../database/produtos.json';
-import jsonBens from '../database/bens.json';
 import api from '../services/api';
 
-type CondicaoData = 'CONTEM' | 'CONTEM EXATO' | 'IGUAL' | 'COMECA';
+export interface Registros {
+  [key: string]: string;
+}
+
+export interface Tabelas {
+  name: string;
+  fields: string[];
+  data: Registros[];
+}
+
+export type CondicaoData = 'CONTEM' | 'CONTEM EXATO' | 'IGUAL' | 'COMECA';
 
 type TabelasStateData = {
   indexTabelaAtual: number;
-  tabelas: any[];
-  produtos: any[];
-  bens: any[];
+  tabelas: Tabelas[];
 };
 
 export interface TabelasContextData extends TabelasStateData {
@@ -25,13 +29,6 @@ export interface TabelasContextData extends TabelasStateData {
   condicoes: CondicaoData[];
   handleChangeTable: (index: number) => void;
 }
-
-type FiltroData = {
-  campo: string;
-  condicao: CondicaoData;
-  operacao: string;
-  texto: string;
-};
 
 type TabelasProviderProps = {
   children: React.ReactNode;
@@ -49,34 +46,21 @@ export const TabelasProvider: React.FC<TabelasProviderProps> = ({
 }: TabelasProviderProps) => {
   const [state, setState] = useState<TabelasStateData>({
     indexTabelaAtual: 0,
-    produtos: [],
     tabelas: [],
-    bens: [],
   });
 
   useEffect(() => {
-    const init = async () => {
-      const jsonTabelas = (await api.get('tabelas')).data;
-      const strTabelas = JSON.stringify(jsonTabelas).toUpperCase();
-      const tabelas = JSON.parse(strTabelas) as any[];
-
-      const jsonBens = (await api.get('bens')).data;
-      const strBens = JSON.stringify(jsonBens).toUpperCase();
-      const bens = JSON.parse(strBens) as any[];
-
-      const jsonProdutos = (await api.get('produtos')).data;
-      const strProdutos = JSON.stringify(jsonProdutos).toUpperCase();
-      const produtos = JSON.parse(strProdutos) as any[];
-
-      setState((current) => ({
-        ...current,
-        tabelas,
-        bens,
-        produtos,
-      }));
-    };
-
-    init();
+    api.get<Tabelas[]>('/lista-tabelas').then(async ({ data }) => {
+      if (data.length) {
+        const promises = data.map(async (tabela) => {
+          const url = '/tabela?name=' + tabela.name;
+          const { data } = await api.get<Registros[]>(url);
+          return { ...tabela, data };
+        });
+        const tabelas = await Promise.all(promises);
+        setState((current) => ({ ...current, tabelas }));
+      }
+    });
   }, []);
 
   const handleChangeTable = useCallback((index: number) => {

@@ -1,0 +1,393 @@
+[
+        {
+            "ÁREA": "ENG. MAN. / PCM",
+            "SUB-ÁREA": "PCM",
+            "USUÁRIO": "wylliam.bassos",
+            "MÓDULO PROTHEUS": "compras",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac",
+            "undefined": "PCM"
+        },
+        {
+            "ÁREA": "ENG. MAN. / PCM",
+            "SUB-ÁREA": "PCM",
+            "USUÁRIO": "wylliam.bassos",
+            "MÓDULO PROTHEUS": "estoque/custos",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "ENG. MAN. / PCM",
+            "SUB-ÁREA": "PCM",
+            "USUÁRIO": "wylliam.bassos",
+            "MÓDULO PROTHEUS": "Plan.Contr.Produção",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "CONSULTA",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "ENG. MAN. / PCM",
+            "SUB-ÁREA": "PCM",
+            "USUÁRIO": "vinicius.medeiros",
+            "MÓDULO PROTHEUS": "compras",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "ENG. MAN. / PCM",
+            "SUB-ÁREA": "PCM",
+            "USUÁRIO": "vinicius.medeiros",
+            "MÓDULO PROTHEUS": "estoque/custos",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "ENG. MAN. / PCM",
+            "SUB-ÁREA": "PCM",
+            "USUÁRIO": "vinicius.medeiros",
+            "MÓDULO PROTHEUS": "Plan.Contr.Produção",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "CONSULTA",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "ENG. MAN. / PCM",
+            "SUB-ÁREA": "PCM",
+            "USUÁRIO": "leonardo.beretta",
+            "MÓDULO PROTHEUS": "compras",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "ENG. MAN. / PCM",
+            "SUB-ÁREA": "PCM",
+            "USUÁRIO": "leonardo.beretta",
+            "MÓDULO PROTHEUS": "estoque/custos",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "ENG. MAN. / PCM",
+            "SUB-ÁREA": "PCM",
+            "USUÁRIO": "leonardo.beretta",
+            "MÓDULO PROTHEUS": "Plan.Contr.Produção",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "CONSULTA",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "ENG. MAN. / PCM",
+            "SUB-ÁREA": "PCM",
+            "USUÁRIO": "joao.berchol",
+            "MÓDULO PROTHEUS": "compras",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "ENG. MAN. / PCM",
+            "SUB-ÁREA": "PCM",
+            "USUÁRIO": "joao.berchol",
+            "MÓDULO PROTHEUS": "estoque/custos",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "ENG. MAN. / PCM",
+            "SUB-ÁREA": "PCM",
+            "USUÁRIO": "joao.berchol",
+            "MÓDULO PROTHEUS": "Plan.Contr.Produção",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "CONSULTA",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "ENG. MAN. / PCM",
+            "SUB-ÁREA": "PCM",
+            "USUÁRIO": "edivan.ferreira",
+            "MÓDULO PROTHEUS": "compras",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "ENG. MAN. / PCM",
+            "SUB-ÁREA": "PCM",
+            "USUÁRIO": "edivan.ferreira",
+            "MÓDULO PROTHEUS": "estoque/custos",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "ENG. MAN. / PCM",
+            "SUB-ÁREA": "PCM",
+            "USUÁRIO": "edivan.ferreira",
+            "MÓDULO PROTHEUS": "Plan.Contr.Produção",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "CONSULTA",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO MEC.",
+            "SUB-ÁREA": "MECÂNICA",
+            "USUÁRIO": "vinicius.vidal",
+            "MÓDULO PROTHEUS": "compras",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac",
+            "undefined": "COORDENADORES"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO MEC.",
+            "SUB-ÁREA": "MECÂNICA",
+            "USUÁRIO": "vinicius.vidal",
+            "MÓDULO PROTHEUS": "estoque/custos",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO MEC.",
+            "SUB-ÁREA": "MECÂNICA",
+            "USUÁRIO": "vinicius.vidal",
+            "MÓDULO PROTHEUS": "Plan.Contr.Produção",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "CONSULTA",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO MEC.",
+            "SUB-ÁREA": "MECÂNICA",
+            "USUÁRIO": "elizandro.soares",
+            "MÓDULO PROTHEUS": "compras",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO MEC.",
+            "SUB-ÁREA": "MECÂNICA",
+            "USUÁRIO": "elizandro.soares",
+            "MÓDULO PROTHEUS": "estoque/custos",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO MEC.",
+            "SUB-ÁREA": "MECÂNICA",
+            "USUÁRIO": "elizandro.soares",
+            "MÓDULO PROTHEUS": "Plan.Contr.Produção",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "CONSULTA",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO ELE.",
+            "SUB-ÁREA": "ELÉTRICA",
+            "USUÁRIO": "clecio.matte",
+            "MÓDULO PROTHEUS": "compras",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO ELE.",
+            "SUB-ÁREA": "ELÉTRICA",
+            "USUÁRIO": "clecio.matte",
+            "MÓDULO PROTHEUS": "estoque/custos",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO ELE.",
+            "SUB-ÁREA": "ELÉTRICA",
+            "USUÁRIO": "clecio.matte",
+            "MÓDULO PROTHEUS": "Plan.Contr.Produção",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "CONSULTA",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO ELE.",
+            "SUB-ÁREA": "AUTOMAÇÃO",
+            "USUÁRIO": "jorge.funke",
+            "MÓDULO PROTHEUS": "compras",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac",
+            "undefined": "AUTOMAÇÃO"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO ELE.",
+            "SUB-ÁREA": "AUTOMAÇÃO",
+            "USUÁRIO": "jorge.funke",
+            "MÓDULO PROTHEUS": "estoque/custos",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO ELE.",
+            "SUB-ÁREA": "AUTOMAÇÃO",
+            "USUÁRIO": "jorge.funke",
+            "MÓDULO PROTHEUS": "Plan.Contr.Produção",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "CONSULTA",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO ELE.",
+            "SUB-ÁREA": "AUTOMAÇÃO",
+            "USUÁRIO": "diogo.ribeiro",
+            "MÓDULO PROTHEUS": "compras",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO ELE.",
+            "SUB-ÁREA": "AUTOMAÇÃO",
+            "USUÁRIO": "diogo.ribeiro",
+            "MÓDULO PROTHEUS": "estoque/custos",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO ELE.",
+            "SUB-ÁREA": "AUTOMAÇÃO",
+            "USUÁRIO": "jorge.luiz",
+            "MÓDULO PROTHEUS": "compras",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO ELE.",
+            "SUB-ÁREA": "AUTOMAÇÃO",
+            "USUÁRIO": "jorge.luiz",
+            "MÓDULO PROTHEUS": "estoque/custos",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO ELE.",
+            "SUB-ÁREA": "AUTOMAÇÃO",
+            "USUÁRIO": "francisco.pellisoli",
+            "MÓDULO PROTHEUS": "compras",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO ELE.",
+            "SUB-ÁREA": "AUTOMAÇÃO",
+            "USUÁRIO": "francisco.pellisoli",
+            "MÓDULO PROTHEUS": "estoque/custos",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO ELE.",
+            "SUB-ÁREA": "ELÉTRICA",
+            "USUÁRIO": "marcio.motta",
+            "MÓDULO PROTHEUS": "compras",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac",
+            "undefined": "SUPERVISORES"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO ELE.",
+            "SUB-ÁREA": "ELÉTRICA",
+            "USUÁRIO": "marcio.motta",
+            "MÓDULO PROTHEUS": "estoque/custos",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO MEC.",
+            "SUB-ÁREA": "MECÂNICA",
+            "USUÁRIO": "rogerio.pedroso",
+            "MÓDULO PROTHEUS": "compras",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO MEC.",
+            "SUB-ÁREA": "MECÂNICA",
+            "USUÁRIO": "rogerio.pedroso",
+            "MÓDULO PROTHEUS": "estoque/custos",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO MEC.",
+            "SUB-ÁREA": "MECÂNICA",
+            "USUÁRIO": "juliano.barcellos",
+            "MÓDULO PROTHEUS": "compras",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO MEC.",
+            "SUB-ÁREA": "MECÂNICA",
+            "USUÁRIO": "juliano.barcellos",
+            "MÓDULO PROTHEUS": "estoque/custos",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO MEC.",
+            "SUB-ÁREA": "MECÂNICA",
+            "USUÁRIO": "joao.telles",
+            "MÓDULO PROTHEUS": "compras",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO MEC.",
+            "SUB-ÁREA": "MECÂNICA",
+            "USUÁRIO": "joao.telles",
+            "MÓDULO PROTHEUS": "estoque/custos",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO CIV.",
+            "SUB-ÁREA": "CIVIL",
+            "USUÁRIO": "jose.gil",
+            "MÓDULO PROTHEUS": "compras",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        },
+        {
+            "ÁREA": "MANUTENÇÃO CIV.",
+            "SUB-ÁREA": "CIVIL",
+            "USUÁRIO": "jose.gil",
+            "MÓDULO PROTHEUS": "estoque/custos",
+            "QTD ABAS SIMULTÂNEAS": "1",
+            "TIPO DE ACESSO": "MANUTENÇÃO",
+            "EMPRESA": "Fibraplac"
+        }
+    ]

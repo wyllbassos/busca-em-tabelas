@@ -51,10 +51,10 @@ export const HeaderButton = styled.div<HeaderButtonProps>`
 
 export const Section = styled.section`
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
 
-  height: 4rem;
+  height: 7rem;
 
   border-bottom: 1px solid var(--gray2);
 `;
@@ -63,6 +63,8 @@ export const InputGroup = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  margin-top: 16px;
 
   height: 2rem;
 
@@ -111,7 +113,7 @@ export const InputGroup = styled.div`
 
 export const MainContainer = styled.main`
   position: relative;
-  height: calc(100vh - 10rem);
+  height: calc(100vh - 14rem);
   width: 100vw;
   overflow: auto;
 `;

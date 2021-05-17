@@ -1,4 +1,4 @@
-import cors from '../../../utils/cors';
+// import cors from '../../../utils/cors';
 import { NextApiRequest, NextApiResponse } from 'next';
 import jsonTabelas from '../../../database/tabelas.json';
 

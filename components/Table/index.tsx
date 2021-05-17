@@ -2,38 +2,33 @@ import React from 'react';
 import { TableContainer } from './styles';
 
 interface TbodyProps {
-  listaCampos: string[];
+  fields: string[];
   itens: any[];
 }
 
 interface ItemProps {
-  listaCampos: string[];
+  fields: string[];
   item: any;
 }
 
-const Table: React.FC<TbodyProps> = ({ itens, listaCampos }) => {
+const Table: React.FC<TbodyProps> = ({ itens, fields }) => {
   return (
-    <TableContainer
-      id="listaRegistros"
-      className="table table-dark table-striped"
-    >
-      <Thead listaCampos={listaCampos} />
-      <tbody key={listaCampos[0]}>
+    <TableContainer>
+      <Thead fields={fields} />
+      <tbody>
         {itens.map((item: any, i) => {
-          return (
-            <Item key={'Item' + i} item={item} listaCampos={listaCampos} />
-          );
+          return <Item key={'Item' + i} item={item} fields={fields} />;
         })}
       </tbody>
     </TableContainer>
   );
 };
 
-const Thead: React.FC<{ listaCampos: string[] }> = ({ listaCampos }) => {
+const Thead: React.FC<{ fields: string[] }> = ({ fields }) => {
   return (
     <thead>
       <tr>
-        {listaCampos.map((campo, index) => {
+        {fields.map((campo, index) => {
           return <th key={index}> {campo} </th>;
         })}
       </tr>
@@ -41,10 +36,10 @@ const Thead: React.FC<{ listaCampos: string[] }> = ({ listaCampos }) => {
   );
 };
 
-const Item: React.FC<ItemProps> = ({ listaCampos, item }) => {
+const Item: React.FC<ItemProps> = ({ fields, item }) => {
   return (
     <tr>
-      {listaCampos.map((campo: string, index: number) => {
+      {fields.map((campo: string, index: number) => {
         return (() => {
           try {
             return <td key={index.toString()}> {item[campo]} </td>;

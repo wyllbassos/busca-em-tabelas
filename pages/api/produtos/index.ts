@@ -1,4 +1,3 @@
-import cors from '../../../utils/cors';
 import { NextApiRequest, NextApiResponse } from 'next';
 import jsonProdutos from '../../../database/produtos.json';
 
