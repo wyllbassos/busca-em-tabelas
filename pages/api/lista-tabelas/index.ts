@@ -17,26 +17,40 @@ const handler = async (_req: NextApiRequest, res: NextApiResponse) => {
     fs.readdir(directoryPath, async (err, files) => {
       //handling error
       if (err) {
-        res.status(500).json({ statusCode: 500, message: err });
+        res.status(400).json({ statusCode: 500, message: err });
+        return;
       }
 
-      const ret = files.map((file) => {
+      const ret: any[] = []
+      files.forEach((file) => {
+        const [name] = file.split('.');
+        if (!name) {
+          console.log("Erro Arquivo .json invalido")
+          return;
+        }
+
         const data = fs.readFileSync(path.join(directoryPath, file), 'utf8');
         const tabela: any[] = JSON.parse(data);
+
+        if (!(tabela instanceof Array)) {
+          console.log(`Dados do arquivo ${file} estao invalidos.`)
+          return;
+        }
+
         const fields = Object.keys(tabela.splice(0, 1)[0]).map((field) =>
           field.toUpperCase()
         );
-        return {
-          name: file.split('.')[0].toUpperCase(),
+        ret.push({
+          name,
           fields,
-        };
+        })
       });
 
-      res.status(200).json(ret);
-      //.json(files.map((file) => file.split('.')[0].toUpperCase()));
+      return  res.status(200).json(ret);
     });
   } catch (err) {
-    res.status(500).json({ statusCode: 500, message: err.message });
+    console.log(err)
+    return  res.status(500).json({ statusCode: 500, message: err.message });
   }
 };
 

@@ -42,7 +42,6 @@ export type Filtro = {
 export const filtraTabela = (
   tabela: Tabelas,
   filtros: Filtro[],
-  limit: number
 ) => {
   const { data, fields } = tabela;
   const dataFiltered: Registros[] = [];
@@ -113,5 +112,5 @@ export const filtraTabela = (
   } catch (error) {
     console.log(error, filtros);
   }
-  return dataFiltered.splice(0, limit);
+  return dataFiltered;
 };

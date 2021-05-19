@@ -6,7 +6,7 @@ import fs from 'fs';
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const { name, limit } = req.query;
-    if (name instanceof Array || name === undefined) {
+    if (name instanceof Array || name === undefined || name === "") {
       res.status(400).json({ statusCode: 500, message: 'Param name Error' });
       return;
     }
@@ -38,6 +38,7 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
     res.status(200).json(tabela);
     return;
   } catch (err) {
+    console.log(err)
     res.status(500).json({ statusCode: 500, message: err.message });
   }
 };

@@ -50,17 +50,20 @@ const ConsultaEmTabelas: React.FC = () => {
   const campoAtual = useMemo(() => listaFiltros[0].campo, [listaFiltros]);
   const condicaoAtual = useMemo(() => listaFiltros[0].condicao, [listaFiltros]);
   const textoAtual = useMemo(() => listaFiltros[0].texto, [listaFiltros]);
-  const totalFilReg = useMemo(() => data.length, [data]);
   const tableName = useMemo(
     () => (tabelaAtual ? tabelaAtual.name : ''),
     [tabelaAtual]
   );
 
-  const dataFilter = useMemo(() => {
-    if (tabelaAtual)
-      return filtraTabela(tabelaAtual, listaFiltros, limiteAtual);
-    return [];
-  }, [tabelaAtual, listaFiltros, limiteAtual]);
+  const dataFilter = useMemo(
+    () => tabelaAtual ? filtraTabela(tabelaAtual, listaFiltros) : [],
+    [tabelaAtual, listaFiltros]
+  );
+
+  const dataDisplayed = useMemo(
+    () => dataFilter.splice(0, limiteAtual),
+    [dataFilter, limiteAtual]
+  );
 
   useEffect(() => {
     setListaFiltros([{ ...filtroInicial }]);
@@ -129,7 +132,6 @@ const ConsultaEmTabelas: React.FC = () => {
       return [...selectedFilter, ...current];
     })
     setIndexListaFiltroSTR(0);
-    console.log(selectedIndex, target[selectedIndex]);
   }, [])
 
   const handleDeleteFilter = useCallback((index: number) => {
@@ -165,9 +167,9 @@ const ConsultaEmTabelas: React.FC = () => {
           </HeaderButton>
         ))}
 
-        <span>
-          {`${totalFilReg > limiteAtual ? limiteAtual : totalFilReg} de ${totalFilReg}`}
-        </span>
+        <span>Exibidos {dataDisplayed.length}</span>
+        <span>Filtrados {dataFilter.length ? dataFilter.length : dataDisplayed.length}</span>
+        <span>Total {data.length}</span>
       </Header>
       <Section>
         <InputGroup>
@@ -244,7 +246,7 @@ const ConsultaEmTabelas: React.FC = () => {
         </InputGroup>
       </Section>
       <MainContainer>
-        <Table itens={dataFilter} fields={fields} />
+        <Table itens={dataDisplayed} fields={fields} />
       </MainContainer>
       <Footer>
         <InputGroup>

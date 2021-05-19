@@ -50,17 +50,24 @@ export const TabelasProvider: React.FC<TabelasProviderProps> = ({
   });
 
   useEffect(() => {
-    api.get<Tabelas[]>('/lista-tabelas').then(async ({ data }) => {
-      if (data.length) {
-        const promises = data.map(async (tabela) => {
-          const url = '/tabela?name=' + tabela.name;
-          const { data } = await api.get<Registros[]>(url);
-          return { ...tabela, data };
-        });
-        const tabelas = await Promise.all(promises);
-        setState((current) => ({ ...current, tabelas }));
-      }
-    });
+    try {
+      api.get<Tabelas[]>('/lista-tabelas').then(async ({ data }) => {
+        if (data.length) {
+          const promises = data.map(async (tabela) => {
+            const url = '/tabela?name=' + tabela.name;
+            const { data } = await api.get<Registros[]>(url);
+              return { ...tabela, data };
+          });
+          const tabelas = await Promise.all(promises);
+          if (tabelas) {
+            setState((current) => ({ ...current, tabelas }));
+          }
+        }
+      });
+    } catch (error) {
+      console.log("Erro")
+      console.log(error)
+    }
   }, []);
 
   const handleChangeTable = useCallback((index: number) => {
