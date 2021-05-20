@@ -61,7 +61,7 @@ const ConsultaEmTabelas: React.FC = () => {
   );
 
   const dataDisplayed = useMemo(
-    () => dataFilter.splice(0, limiteAtual),
+    () => [...dataFilter].splice(0, limiteAtual),
     [dataFilter, limiteAtual]
   );
 
@@ -171,6 +171,7 @@ const ConsultaEmTabelas: React.FC = () => {
         <span>Filtrados {dataFilter.length ? dataFilter.length : dataDisplayed.length}</span>
         <span>Total {data.length}</span>
       </Header>
+
       <Section>
         <InputGroup>
           <span className="borders-left">Filtrar</span>
@@ -221,6 +222,7 @@ const ConsultaEmTabelas: React.FC = () => {
             Limpar Filtros
           </button>
         </InputGroup>
+        
         <InputGroup>
           <span className="borders-left">Filtros</span>
           <select
@@ -245,9 +247,11 @@ const ConsultaEmTabelas: React.FC = () => {
           </button>
         </InputGroup>
       </Section>
+
       <MainContainer>
         <Table itens={dataDisplayed} fields={fields} />
       </MainContainer>
+
       <Footer>
         <InputGroup>
           <span className="borders-left">Itens Por Pagina</span>

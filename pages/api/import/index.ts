@@ -14,28 +14,39 @@ export const config = {
 const handler = async (req: NextApiRequest, res: NextApiResponse) => {
   try {
     const { name, table, password } = req.body;
-    if (password !== '@AlmoxFibra') {
-      res.status(400).json({ statusCode: 400, message: 'password Error' });
-      return;
-    }
 
-    if (name instanceof Array || name === undefined) {
-      res.status(400).json({ statusCode: 400, message: 'Param name Error' });
-      return;
-    }
-
-    // return res.status(200).json({ name, table });
-
-    const filePath = path.join(
+    const rootPath = path.join(
       __dirname,
       '..',
       '..',
       '..',
       '..',
-      'database',
-      '\\',
-      name.toLowerCase() + '.json'
     );
+    const originalPassword = fs.readFileSync(path.join(rootPath,'password.txt'), 'utf8');
+
+    if (!originalPassword) {
+      res.status(400).json({ statusCode: 500, message: 'Internal Error No Password.txt File' });
+      return;
+    }
+
+    if (password !== originalPassword) {
+      res.status(400).json({ statusCode: 400, message: 'password Error' });
+      return;
+    }
+
+    if (name instanceof Array || name === undefined || name === "") {
+      res.status(400).json({ statusCode: 400, message: 'Param name Error' });
+      return;
+    }
+
+    if (table === undefined || table === "" || table.length === undefined || table.length === 0) {
+      res.status(400).json({ statusCode: 400, message: 'Param table Error' });
+      return;
+    }
+
+    // return res.status(200).json({ name, table });
+
+    const filePath = path.join(rootPath, 'database', '\\', name.toLowerCase() + '.json');
 
     fs.writeFileSync( filePath, JSON.stringify(table))
 

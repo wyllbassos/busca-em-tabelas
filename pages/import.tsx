@@ -56,7 +56,10 @@ const Import: React.FC = () => {
       setName("");
       setPassword("");
     } catch (error) {
-      console.log(error)
+      const errorType = error.message || ''
+      const errorMessage = (error.response && error.response.data && error.response.data.message)
+      window.alert(errorType + '\n' +JSON.stringify(errorMessage))
+
     }
 
     // console.log(response.data);
