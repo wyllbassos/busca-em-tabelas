@@ -5,7 +5,9 @@ import React, {
   useCallback,
   useEffect,
 } from 'react';
-import api from '../services/api';
+
+import axios from 'axios';
+const api = axios.create();
 
 export interface Registros {
   [key: string]: string;
@@ -44,12 +46,18 @@ const TabelasContext = createContext<TabelasContextData>(
 export const TabelasProvider: React.FC<TabelasProviderProps> = ({
   children,
 }: TabelasProviderProps) => {
+  if (typeof window !== 'undefined') {
+    const origin = window.location.origin
+    api.defaults.baseURL = `${origin}/api`;
+  }
+
   const [state, setState] = useState<TabelasStateData>({
     indexTabelaAtual: 0,
     tabelas: [],
   });
 
   useEffect(() => {
+    
     try {
       api.get<Tabelas[]>('/lista-tabelas').then(async ({ data }) => {
         if (data.length) {

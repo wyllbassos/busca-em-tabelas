@@ -1,7 +1,10 @@
 import { GetStaticProps } from 'next';
 import React, { useState, useCallback } from 'react';
-import api from '../services/api';
+// import api from '../services/api';
 import { Container, InputGroup } from '../styles/import';
+
+import axios from 'axios';
+const api = axios.create();
 
 function makeObjectData(lines: string[][], header: string[]) {
   const numberColuns = header.length;
@@ -39,6 +42,11 @@ function makeObjectData(lines: string[][], header: string[]) {
 }
 
 const Import: React.FC = () => {
+  if (typeof window !== 'undefined') {
+    const origin = window.location.origin
+    api.defaults.baseURL = `${origin}/api`;
+  }
+
   const [data, setDate] = useState("")
   const [name, setName] = useState("")
   const [password, setPassword] = useState("");
@@ -62,7 +70,6 @@ const Import: React.FC = () => {
 
     }
 
-    // console.log(response.data);
   }, [name, data, password]);
 
   return (
@@ -91,7 +98,6 @@ const Import: React.FC = () => {
   )
 }
 
-// export async function getServerSideProps() {
 export const getStaticProps: GetStaticProps = async () => {
   return {
     props: { },

@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-// type HeaderButtonProps = {
-//   selected?: boolean;
-// };
-
 export const Container = styled.main`
   display: flex;
   flex-direction: column;

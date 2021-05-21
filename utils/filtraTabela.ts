@@ -1,38 +1,5 @@
 import { Tabelas, CondicaoData, Registros } from '../hooks/tabelas';
 
-// interface ItemProps {
-//   [key: string]: string | boolean;
-//   __ativo: boolean;
-// }
-
-// interface CampoProps {
-//   nome: string;
-//   ativo: boolean;
-// }
-
-// type MetaDadosTabela = {
-//   numRegistrosFiltrados: number;
-//   limite: number;
-//   nome: string;
-//   listaFiltros: Filtro[];
-//   tabela: Tabelas;
-// }
-
-// class ClassInfoTabela {
-//   //} implements infoTabelaProps {
-//   numRegistrosFiltrados = 0;
-//   limite = 10;
-//   nome = '';
-//   itens = new Array<ItemProps>();
-//   campos = new Array<CampoProps>();
-//   listaCampos = new Array<string>();
-//   ativo = true;
-//   listaFiltros = new Array<Filtro>(new ClassFiltroProps());
-//   constructor(nome: string) {
-//     this.nome = nome;
-//   }
-// }
-
 export type Filtro = {
   campo: string;
   condicao: CondicaoData;

@@ -1,10 +1,9 @@
 import axios from 'axios';
 
+// const baseUrl = window.location.href.split(window.location.pathname)[0] + '/api';
+
 const api = axios.create({
-  baseURL: `http://glo-01-0443.isdra.com.br:3002/api`,
-  // baseURL: 'http://localhost:3333',
-  // baseURL: 'http://glo-01-0443:3333',
-  // baseURL: 'http://172.16.104.252:3333',
+  baseURL: "baseUrl",
 });
 
 export default api;

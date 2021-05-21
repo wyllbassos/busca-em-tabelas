@@ -44,8 +44,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       return;
     }
 
-    // return res.status(200).json({ name, table });
-
     const filePath = path.join(rootPath, 'database', '\\', name.toLowerCase() + '.json');
 
     fs.writeFileSync( filePath, JSON.stringify(table))
