@@ -1,0 +1,8 @@
+version: '3'
+services:
+  nextjs:
+    container_name: busca-em-tabelas
+    build:
+      context: ./
+    ports:
+      - 3002:3002

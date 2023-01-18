@@ -18,7 +18,6 @@ const handler = async (req: NextApiRequest, res: NextApiResponse) => {
       '..',
       '..',
       'database',
-      '\\',
       name.toLowerCase() + '.json'
     );
 
