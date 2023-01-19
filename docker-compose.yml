@@ -7,4 +7,4 @@ services:
     ports:
       - 80:3002
     volumes:
-      - ./database:/busca-em-tabelas/database
+      - ./database:/opt/busca-em-tabelas/database
