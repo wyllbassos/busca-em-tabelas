@@ -57,19 +57,29 @@ export const TabelasProvider: React.FC<TabelasProviderProps> = ({
   });
 
   useEffect(() => {
-    
     try {
       api.get<Tabelas[]>('/lista-tabelas').then(async ({ data }) => {
+        setState({
+          indexTabelaAtual: 0,
+          tabelas: data.map(d => ({ ...d, data: [] })),
+        })
+
         if (data.length) {
-          const promises = data.map(async (tabela) => {
+          data.forEach(async (tabela) => {
             const url = '/tabela?name=' + tabela.name;
-            const { data } = await api.get<Registros[]>(url);
-              return { ...tabela, data };
+            const { data: registros } = await api.get<Registros[]>(url);
+
+            setState(({ indexTabelaAtual, tabelas }) => {
+              const newTabelas = [...tabelas];
+              const index = tabelas.findIndex(t => t.name === tabela.name);
+              newTabelas[index].data = registros;
+
+              return {
+                indexTabelaAtual,
+                tabelas: newTabelas
+              };
+            });
           });
-          const tabelas = await Promise.all(promises);
-          if (tabelas) {
-            setState((current) => ({ ...current, tabelas }));
-          }
         }
       });
     } catch (error) {

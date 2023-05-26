@@ -21,8 +21,13 @@ const filtroInicial: Filtro = {
 };
 
 const ConsultaEmTabelas: React.FC = () => {
-  const { tabelas, limites, condicoes, indexTabelaAtual, handleChangeTable } =
-    useTabelas();
+  const {
+    tabelas,
+    limites,
+    condicoes,
+    indexTabelaAtual,
+    handleChangeTable
+  } = useTabelas();
 
   const [limiteAtual, setLimiteAtual] = useState(10);
   const [listaFiltroSTR, setListaFiltroSTR] = useState(new Array<string>());
@@ -32,32 +37,34 @@ const ConsultaEmTabelas: React.FC = () => {
     { ...filtroInicial },
   ]);
 
-  const tabelaAtual = useMemo(() => {
-    if (tabelas.length) return tabelas[indexTabelaAtual];
-    return undefined;
+  const {
+    tableName,
+    fields,
+    data,
+  } = useMemo(() => {
+    if (tabelas.length) return {
+      tableName: tabelas[indexTabelaAtual].name,
+      fields: tabelas[indexTabelaAtual].fields,
+      data: tabelas[indexTabelaAtual].data,
+    };
+    return {
+      tableName: undefined,
+      fields: undefined,
+      data: undefined,
+    };
   }, [tabelas, indexTabelaAtual]);
 
-  const fields = useMemo(() => {
-    if (tabelaAtual) return tabelaAtual.fields;
-    return [];
-  }, [tabelaAtual]);
-
-  const data = useMemo(() => {
-    if (tabelaAtual) return tabelaAtual.data;
-    return [];
-  }, [tabelaAtual]);
+  console.log(indexTabelaAtual, fields, data);
 
   const campoAtual = useMemo(() => listaFiltros[0].campo, [listaFiltros]);
   const condicaoAtual = useMemo(() => listaFiltros[0].condicao, [listaFiltros]);
   const textoAtual = useMemo(() => listaFiltros[0].texto, [listaFiltros]);
-  const tableName = useMemo(
-    () => (tabelaAtual ? tabelaAtual.name : ''),
-    [tabelaAtual]
-  );
 
   const dataFilter = useMemo(
-    () => tabelaAtual ? filtraTabela(tabelaAtual, listaFiltros) : [],
-    [tabelaAtual, listaFiltros]
+    () => (tableName && fields && data)
+      ? filtraTabela({ data, fields, name: tableName }, listaFiltros)
+      : [],
+    [tableName, fields, data, listaFiltros]
   );
 
   const dataDisplayed = useMemo(
@@ -146,7 +153,7 @@ const ConsultaEmTabelas: React.FC = () => {
     setIndexListaFiltroSTR(newIndex < 0 ? 0 : newIndex);
   }, [])
 
-  if (!tabelaAtual) return <div>Carregando...</div>;
+  if (!fields) return <div>Carregando...</div>;
 
   return (
     <>
