@@ -153,7 +153,7 @@ const ConsultaEmTabelas: React.FC = () => {
     setIndexListaFiltroSTR(newIndex < 0 ? 0 : newIndex);
   }, [])
 
-  if (!fields) return <div>Carregando...</div>;
+  if (!fields || !data || !tableName) return <div>Carregando...</div>;
 
   return (
     <>
